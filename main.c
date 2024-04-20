@@ -1,9 +1,9 @@
 
 //  Author: PHNO - Tecnólogo | Pós-Graduado
 //  Data Release: 04/11/2023
-//  Versao Codigo: 2.0.1v
+//  Versão Código: 2.0.1v
 //  Replit: @PHNO, @PHREPLIT
-//  Email: phreplit@gmail.com
+//  E-mail: phreplit@gmail.com
 
 // Algoritmo: Metragem e Calculo para Pintura Residencial, algoritmo desenvolvido em c, desenvolvido para profissionais da area.
 
@@ -12,7 +12,7 @@
 #include <math.h> 
 
 int menu(); 
-void op1(); 
+void op1(); // cabecalho
 void op2(); 
 void op3();
 void op4();
@@ -33,21 +33,20 @@ printf("\n2. Calcular Quantidade de Latas por M²");
 printf("\n3. Calcular Quantidade de Demaos por Lata(s)");
 printf("\n4. Calcular Quantidade de Demaos por M²");
 printf("\n5. Sair\n");
-
 printf("\n[8] Info\n");
-
 printf("\n[9] Sobre \n");
 
 printf("\nDigite sua escolha: ");
 scanf("%d", &op);
 
-while ((c = getchar()) != '\n' && c != EOF) {} // limpar o buffer do teclado.   
+while ((c = getchar()) != '\n' && c != EOF) {
+} // limpar o buffer do teclado.   
 return op; 
 }
 
 int main() { // Funcao principal
 
-int op, c;
+int op = 0, c;
 
 while (op != -1) { 
 op = menu(); 
@@ -62,7 +61,7 @@ case 3:
 op3(); // funcao 
 break;
 case 4:
-op4();
+op4(); // funcao
 break;
 case 5:
 printf("\n");
@@ -74,7 +73,7 @@ case 8:
 op8(); // funcao
 break;
 case 9:
-menu_developer();
+menu_developer(); // funcao
 break; 
 default: 
 printf("\n");
@@ -85,7 +84,7 @@ printf("\nTeclar enter para retornar ao menu...\n");
 getchar();
 scanf("c\n");
 system("clear");      // linux limpar tela
-system("tput reset"); // linux limpar
+system("tput reset"); // linux limpar texto
 } 
 } 
 return 0; 
@@ -105,12 +104,12 @@ resultado = v1 * v2;
 printf("\nA parede tem %d metros quadrados.\n", resultado);
 // system("pause"); // pausa tela windows
 // system("Cls"); // limpa tela windows
-//printf("\n"); // pula linha
+// printf("\n"); // pula linha
 printf("\nTeclar enter para retornar ao menu...\n");
 getchar();
 scanf("c\n");
 system("clear");      // linux limpar tela
-system("tput reset"); // linux limpar
+system("tput reset"); // linux limpar texto
 return; 
 }
 
@@ -120,25 +119,21 @@ int v2 = 360; // quantidade tinta por 1 metro quadrado
 int resultado; // quantidade de tinta por (n) tantos m²
 int qtdtinta = 3600; // 1 lata tem 3600ml(3,6)
 int resultado2; // quantidade de latas
-
 printf("\n");
 printf("\nDigite quantos metros quadrados tem a parede: ");
 scanf("%d", &v1, stdin);
 printf("\n");
-
 resultado = (v1 * v2);
 resultado2 = (resultado / qtdtinta);
-  
 printf("\nA quantidade de tinta para pintar %d M² eh de %d mililitro(s) e a quantidade de lata(s) eh de %d lata(s).\n", v1, resultado, resultado2);
-  
 // system("pause"); // pausa tela windows
 // system("Cls"); // limpa tela windows
-//printf("\n"); // pula linha
+// printf("\n"); // pula linha
 printf("\nTeclar enter para retornar ao menu...\n");
 getchar();
 scanf("c\n");
 system("clear");      // linux limpar tela
-system("tput reset"); // linux limpar
+system("tput reset"); // linux limpar texto
 return; 
 }
 
@@ -150,27 +145,22 @@ int resultado; // demao
 int calcqtdlitro; // quantidade tinta
 int calcmq; // metro quadrado
 int mq1 = 360; // 1 metro quadrado
-
 printf("\n");
 printf("\nDigite a quantidade de latas de tinta obtidas por M²: ");
 scanf("%d", &v1, stdin);
 printf("\n");
-
 resultado = (v1 * v2);
 calcqtdlitro = (v1 * lata1);
 calcmq = (calcqtdlitro / mq1);
-
-
 printf("\nA quantidade de demaos por %d lata(s) de tinta sera de %d demao(s).\n", v1, resultado);
-
 // system("pause"); // pausa tela windows
 // system("Cls"); // limpa tela windows
-//printf("\n"); // pula linha
+// printf("\n"); // pula linha
 printf("\nTeclar enter para retornar ao menu...\n");
 getchar();
 scanf("c\n");
 system("clear");      // linux limpar tela
-system("tput reset"); // linux limpar
+system("tput reset"); // linux limpar texto
 return; 
 }
 
@@ -182,26 +172,22 @@ int resultado; // demao
 int calcqtdlitro; // quantidade tinta
 int calcmq; // metro quadrado
 int mq1 = 360; // 1 metro quadrado
-
 printf("\n");
 printf("\nDigite a quantidade de latas de tinta obtidas por M²: ");
 scanf("%d", &v1, stdin);
 printf("\n");
-
 resultado = (v1 * v2);
 calcqtdlitro = (v1 * lata1);
 calcmq = (calcqtdlitro / mq1);
-
-
 printf("\nA quantidade de demaos para pintar %d metros quadrados sera de %d demao(s).\n", calcmq, resultado);
 // system("pause"); // pausa tela windows
 // system("Cls"); // limpa tela windows
-//printf("\n"); // pula linha
+// printf("\n"); // pula linha
 printf("\nTeclar enter para retornar ao menu...\n");
 getchar();
 scanf("c\n");
 system("clear");      // linux limpar tela
-system("tput reset"); // linux limpar
+system("tput reset"); // linux limpar texto
 return; 
 }
 
@@ -219,7 +205,6 @@ getchar();
 scanf("c\n");
 system("clear");      // linux
 system("tput reset"); // linux
-
 return;
 }
 
@@ -231,11 +216,11 @@ int menu_developer(){
   printf("\n Data Release: 04/11/2023 ");
   printf("\n Versao Codigo: 2.0.1v");
   printf("\n Replit: @PHNO, @PHREPLIT");
-  printf("\n Email: phreplit@gmail.com \n");
+  printf("\n E-mail: phreplit@gmail.com \n");
   printf("\n Teclar enter para retornar ao menu...\n ");
   getchar();
   scanf("c\n");
   system("clear");      // linux
   system("tput reset"); // linux
-    return 0;
+  return 0;
 }
